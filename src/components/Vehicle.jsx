@@ -13,7 +13,6 @@ import { ModelY } from '../../ModelY';
 import { Silverado } from '../../Silverado';
 import { Challenger } from '../../Challenger';
 import { F150 } from '../../F150';
-import { Corvette } from '../../Corvette2';
 import { Canyon } from '../../Canyon';
 import { GTR } from '../../GTR';
 import { Runner4 } from '../../4Runner';
@@ -31,6 +30,7 @@ import { Model3 } from '../../Model3';
 import { ModelX } from '../../ModelX';
 import { Cybertruck } from '../../Cybertruck';
 import { NewTundra } from '../../NewTundra';
+import { Corvette } from '../../Corvette';
 
 
 
@@ -111,7 +111,7 @@ const componentMap = {
   chevy: {
     camaro: <Camaro scale={1.6} position={[0, -1.1, 0]} />,
     colorado: <Colorado scale={6} position={[0, -1.1, 0]} />,
-    corvette: <Corvette scale={2.8} position={[0, -1.1, 0]} />,
+    corvette: <Corvette scale={1.5} position={[0, -1.1, 0]} />,
     silverado: <Silverado scale={0.4} position={[0, -1.1, 0]} />,
   },
   ford: {
