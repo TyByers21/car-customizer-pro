@@ -6,8 +6,8 @@ Command: npx gltfjsx@6.2.16 public/models/NissanZ.glb
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useSnapshot } from "valtio"
-import { useCustomization } from './src/context/Customization';
-import { state } from './src/components/ColorPicker';
+import { useCustomization } from '../context/Customization';
+import { state } from '../components/ColorPicker';
 
 export function NissanZ(props) {
   const { overlay } = useCustomization()

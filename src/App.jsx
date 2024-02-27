@@ -14,7 +14,7 @@ export default function App() {
     <CustomizationProvider>
       <div className="App">
       <Loader />
-        <Canvas shadows camera={{ position: [0, 0, 20], fov: 25 }}>
+        <Canvas shadows camera={{ position: [0, 0, 20], fov:50 }}>
           <color attach="background" args={['#15151a']} />
           <Suspense fallback={null}>
               <DisplayModel />

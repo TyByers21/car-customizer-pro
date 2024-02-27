@@ -6,8 +6,8 @@ Command: npx gltfjsx@6.2.16 public/models/Porsche911.glb
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { proxy, useSnapshot } from "valtio"
-import { useCustomization } from './src/context/Customization';
-import { state } from './src/components/ColorPicker';
+import { useCustomization } from '../context/Customization';
+import { state } from '../components/ColorPicker';
 
 export function Porsche(props) {
   const { overlay } = useCustomization()

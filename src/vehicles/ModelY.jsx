@@ -1,8 +1,8 @@
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useSnapshot } from "valtio"
-import { useCustomization } from './src/context/Customization';
-import { state } from './src/components/ColorPicker';
+import { useCustomization } from '../context/Customization';
+import { state } from '../components/ColorPicker';
 
 export function ModelY(props) {
   const { overlay } = useCustomization()
