@@ -1,5 +1,5 @@
-import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber"
+import { Suspense, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber"
 import { ContactShadows, Environment, Lightformer, OrbitControls, Loader } from "@react-three/drei"
 
 import { CustomizationProvider } from "./context/Customization"
@@ -8,6 +8,7 @@ import { DisplayModel } from "./components/Vehicle"
 import Configurator2 from "./components/Configurator2";
 
 export default function App() {
+
 
   return (
 
@@ -20,7 +21,7 @@ export default function App() {
               <DisplayModel />
           </Suspense>
           <hemisphereLight intensity={0.5} />
-          {/* <ContactShadows resolution={1024} frames={1} position={[0, -1.16, 0]} scale={15} blur={0.5} opacity={1} far={20} /> */}
+          {/* <ContactShadows resolution={1024} frames={1} position={[0, -1.16, 0]} scale={15} blur={0.5} opacity={0.5} far={20} /> */}
           <mesh scale={4} position={[3, -1.161, -1.5]} rotation={[-Math.PI / 2, 0, Math.PI / 2.5]}>
             <ringGeometry args={[0.9, 1, 4, 1]} />
             <meshStandardMaterial color="white" roughness={0.75} />
@@ -48,9 +49,9 @@ export default function App() {
             {/* Key */}
             <Lightformer form="ring" color="gray" intensity={10} scale={2} position={[10, 5, 10]} onUpdate={(self) => self.lookAt(0, 0, 0)} />
           </Environment>
-          {/* <ContactShadows position={[0, -0.8, 0]} opacity={0.25} scale={10} blur={1.5} far={0.8} /> */}
+          <ContactShadows position={[0, -0.8, 0.0]} opacity={0.75} scale={10} blur={2.5} far={0.8} />
           {/* <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={true} enablePan={false} /> */}
-          <OrbitControls enablePan={false} enableZoom={true} minPolarAngle={Math.PI / 2.2} maxPolarAngle={Math.PI / 2.2} />
+          <OrbitControls autoRotate enablePan={false} enableZoom={true} minPolarAngle={Math.PI / 2.2} maxPolarAngle={Math.PI / 2.2} />
         </Canvas>
         <Configurator2 />
       </div>
